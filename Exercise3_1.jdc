@@ -5,3 +5,4 @@ if (d1 == d2) {
 } else {
     println("1.255 is NOT equal to 1.255 plus minus 7");
 }
+println("test commit");

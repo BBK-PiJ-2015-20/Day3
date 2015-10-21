@@ -1,0 +1,69 @@
+import java.lang.Math;
+
+Point point1 = new Point();
+Point point2 = new Point();
+Point point3 = new Point();
+
+String str;
+
+
+println("Enter coordinates of point 1");
+str = readLine();
+point1.x = Double.parseDouble(str);
+str = readLine();
+point1.y = Double.parseDouble(str);
+
+println(point1.x);
+println(point1.y);
+
+println("Enter coordinates of point 2");
+str = readLine();
+point2.x = Double.parseDouble(str);
+str = readLine();
+point2.y = Double.parseDouble(str);
+
+println(point2.x);
+println(point2.y);
+
+println("Enter coordinates of point 3");
+str = readLine();
+point3.x = Double.parseDouble(str);
+str = readLine();
+point3.y = Double.parseDouble(str);
+
+println(point3.x);
+println(point3.y);
+
+//distance between point1 and point2
+double xSumOfSquares12 = Math.pow(point1.x - point2.x, 2);
+double ySumOfSquares12 = Math.pow(point1.y - point2.y, 2);
+double result12 = Math.sqrt(xSumOfSquares12 + ySumOfSquares12);
+println (result12);
+
+//distance between point 1 and point3
+double xSumOfSquares13 = Math.pow(point1.x - point3.x, 2);
+double ySumOfSquares13 = Math.pow(point1.y - point3.y, 2);
+double result13 = Math.sqrt(xSumOfSquares13 + ySumOfSquares13);
+println (result13);
+
+//distance between point2 and point3
+double xSumOfSquares23 = Math.pow(point2.x - point3.x, 2);
+double ySumOfSquares23 = Math.pow(point2.y - point3.y, 2);
+double result23 = Math.sqrt(xSumOfSquares23 + ySumOfSquares23);
+println (result23);
+
+//Comparing the distances between the points
+
+if ((result12 <= result13) && (result12 <= result23)){
+ println ("point1 and point2 are the closest");}
+if ((result13 <= result12) && (result13 <= result23)){
+ println ("point1 and point3 are the closest");}
+if ((result23 <= result12) && (result23 <= result13)){
+ println ("point2 and point3 are the closest");}
+
+class Point {
+ double x;
+ double y;
+}
+
+

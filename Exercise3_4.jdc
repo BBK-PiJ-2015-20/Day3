@@ -60,7 +60,7 @@ if ((result13 <= result12) && (result13 <= result23)){
  println ("point1 and point3 are the closest");}
 if ((result23 <= result12) && (result23 <= result13)){
  println ("point2 and point3 are the closest");}
-
+println ("End");
 class Point {
  double x;
  double y;

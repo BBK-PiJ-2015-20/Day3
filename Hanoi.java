@@ -17,10 +17,11 @@ public class Hanoi
 	}
 
 	public int hanoi(int n) {
-		if (n < 0){
+		if (n <= 0){
 		 	return 0;
 		} else {
-		 	 int han =  2 * hanoi(n-1) +1;
+		 	 int han =  2 * (hanoi(n-1))+1;
+			 
 			  return han;					 	
 		}
 	}

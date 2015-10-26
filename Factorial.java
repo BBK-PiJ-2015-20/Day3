@@ -2,11 +2,15 @@ public class Factorial
 { 
 	public static void main(String[] args) 
 	{
-        	//System.out.println("Enter the number for factorial");
-		//int myInt = System.console().readLine();
+        	Factorial factorial = new Factorial();
+		factorial.launch();
+	}
 
+	private void launch() {
+		//System.out.println("Enter the number for factorial");
+		//int myInt = System.console().readLine();
 		System.out.println("result is:"+factorial(5));
-		
+		System.out.println(factorial(5));
 	}
 
 	public void aMethod(){
@@ -17,10 +21,8 @@ public class Factorial
 		 	return 1;
 		} else {
 		 	 int fact = n * factorial(n-1);
-			  return fact;			
-		 	
+			  return fact;					 	
 		}
-		System.out.println(factorial(n));
 	}
 }
 

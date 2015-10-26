@@ -7,9 +7,9 @@ public class Hanoi
 	}
 
 	private void launch() {
-		//System.out.println("Enter the number discs");
-		//int myInt = System.console().readLine();
-		System.out.println("result is:"+hanoi(4));
+		System.out.println("Enter the number discs");
+		int myInt = Integer.parseInt(System.console().readLine());
+		System.out.println("the number of moves is:"+hanoi(myInt));
 		
 	}
 

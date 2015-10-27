@@ -7,10 +7,10 @@ public class Factorial
 	}
 
 	private void launch() {
-		//System.out.println("Enter the number for factorial");
-		//int myInt = System.console().readLine();
-		System.out.println("result is:"+factorial(5));
-		System.out.println(factorial(5));
+		System.out.println("Enter the number to calculate its factorial");
+		int myInt = Integer.parseInt(System.console().readLine());
+		System.out.println("Factorial of "+myInt+" is:"+factorial(myInt));
+		
 	}
 
 	public void aMethod(){

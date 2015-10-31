@@ -15,11 +15,27 @@ public class PaperSize
 		Paper paper = new Paper();
 		paper.x = x0;
 		paper.y = y0;
+		Boolean validInput = false;
 		
 		System.out.println("Enter the the paper size to calculate dimensions");
 		String str = System.console().readLine();
-		System.out.println(validity(str));
-				
+		validInput = validity(str);
+		System.out.println(validInput);
+		while (validInput == false){
+			System.out.println("Enter a valid paper name");
+			str = System.console().readLine();
+			validInput = validity(str);
+			
+		}
+		//System.out.println(validity(str));
+		if(validity(str) == true){
+		 /*String size = str.substring(1);
+		 int s = Integer.parseInt(size);
+		 paperSmall(s, paper);
+		 System.out.println("Dimension of the paper "+str+" is: ");
+		  */
+		  System.out.println("beginning of size calculation");
+		}		
 	}
 	//check the input validity
 		public Boolean validity(String str){
@@ -35,7 +51,7 @@ public class PaperSize
 			 if(l == 1){
 				for(i=0; i<9; i++){
 				 if (str2.substring(0, 1).equals("+i+"))
-					
+					 System.out.println(i);
 					valid = true;		 
 				}
 			}			
@@ -55,6 +71,16 @@ public class PaperSize
 		}
 		return valid;	
 		}
+		
+	/*public Paper paperSmall(int s, Paper paper) {
+		if(s)
+		paper.x = paper.y;
+		System.out.println(paper.x)
+		paper.y = paper.x/2;
+	    paperSmall(s-1);
+		return paper;
+		
+	}*/
 
 	class Paper {
  double x;

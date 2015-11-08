@@ -27,6 +27,15 @@ public class CourseWork4
 		System.out.println (yellowReader (card1, 6)? "pass" : "problem with card");
 		System.out.println (yellowReader (card2, 4)? "pass" : "problem with card");
 		System.out.println (yellowReader (card2, 5)? "pass" : "problem with card");
+		System.out.println (card1.autotopup);
+		System.out.println (card1.registered);
+		System.out.println (card1.amount);
+		
+		System.out.println (card2.autotopup);
+		System.out.println (card2.registered);
+		System.out.println (card2.amount);
+		System.out.println (card2.travelcardAttached.type);
+		System.out.println (card2.travelcardAttached.zone);
 		
 	}
 

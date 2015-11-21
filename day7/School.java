@@ -22,4 +22,24 @@ public class School{
 		}
 		
 	}
+	
+	public void deleteStudent(String name){
+		if(name.equals(studentListStart.getName())){
+			studentListStart = studentListStart.getNext();
+			studentListStart.setPrev(null);
+		}
+		else {
+			Student current = studentListStart;
+			while((current.getNext() != null) && (!name.equals(current.getName())))
+				current = current.getNext();
+			if (current == null)
+				return;
+			else{
+				current.getPrev().setNext(current.getNext());
+				current.getNext().setPrev(current.getPrev());
+				return;
+			}
+			}
+		}
+	
 }

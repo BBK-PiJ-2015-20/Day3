@@ -29,8 +29,8 @@ public class IntegerTreeNode implements IntegerTree {
 			return true;
 		}
 		else {
-			if (intTofind > this.value){
-				If (right != null){
+			if (intToFind > this.value){
+				if (right != null){
 					return right.contains(intToFind);
 				}	
 			}
@@ -85,7 +85,7 @@ public class IntegerTreeNode implements IntegerTree {
 	
 	public void addInteger(int newInteger)
 	{
-		if(newInteger() > value){
+		if(newInteger > value){
 			if(right == null) {
 				right = new IntegerTreeNode(newInteger);
 			}

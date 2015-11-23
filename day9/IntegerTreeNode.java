@@ -1,4 +1,4 @@
-public class IntegerTreeNode {
+public class IntegerTreeNode implements IntegerTree {
 	private int value;
 	private IntegerTreeNode left;
 	private IntegerTreeNode right;
@@ -23,14 +23,49 @@ public class IntegerTreeNode {
 		this.right = rightNode;
 	}
 	
-	public IntegerTreeNode(int value){
-		this.value = value;
+	public boolean contains(int intToFind){
+		boolean result = false;
+		if(this.value == intToFind){
+			return true;
+		}
+		else {
+			if (intTofind > this.value){
+				If (right != null){
+					return right.contains(intToFind);
+				}	
+			}
+			else {
+				if (left != null){
+					return left.contains(intToFind);
+				}
+			}
+		}
+		return false;
+	}
+	
+	public IntegerTreeNode(int newvalue){
+		this.value = newvalue;
 		this.left = null;
 		this.right = null;
 	}
 	
-	public add(IntegerTreeNode n)
+	public void addInteger(int newInteger)
 	{
-		if(this.getValue() > n.getValue())
+		if(newInteger() > value){
+			if(right == null) {
+				right = new IntegerTreeNode(newInteger);
+			}
+			else {
+				right.addInteger(newInteger);
+			}
+		}
+		else {
+			if(left == null) {
+				left = new IntegerTreeNode(newInteger);
+			}
+			else {
+				left.addInteger(newInteger);
+			}
+		}
 	}
 }

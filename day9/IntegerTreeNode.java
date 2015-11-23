@@ -43,6 +43,40 @@ public class IntegerTreeNode implements IntegerTree {
 		return false;
 	}
 	
+	public int getMax(){
+		if (right == null){
+			return this.value;
+		}
+		else {
+			return right.getMax();
+		}
+	}
+	
+	public int getMin(){
+		if (left == null){
+			return this.value;
+		}
+		else {
+			return left.getMin();
+		}
+	}
+	
+	public int getDepth(){
+		int leftDepth = 0;
+		if (left != null){
+				leftDepth = left.getDepth();
+		}
+		int rightDepth = 0;
+		if(right != null){
+			rightDepth = right.getDepth();
+		}
+		if (leftDepth > rightDepth){
+			return 1 + leftDepth;
+		}
+		else {
+				return 1 + rightDepth;
+		}
+	}
 	public IntegerTreeNode(int newvalue){
 		this.value = newvalue;
 		this.left = null;

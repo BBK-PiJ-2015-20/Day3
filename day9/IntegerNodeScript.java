@@ -5,5 +5,6 @@ public class IntegerNodeScript{
 		root.addInteger(6);
 		root.addInteger(8);
 		root.addInteger(7);
+		root.getDepth();
 	}
 }

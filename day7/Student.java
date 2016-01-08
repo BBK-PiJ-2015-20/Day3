@@ -6,13 +6,11 @@ public class Student{
 
 		public String getName(){
 			return name;
-		}
-		
+		}	
 		
 		public int getYear(){
 			return year;
-		}
-		
+		}		
 				
 		public Student getNext(){
 			return next;

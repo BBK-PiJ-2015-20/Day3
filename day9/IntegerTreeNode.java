@@ -72,7 +72,7 @@ public class IntegerTreeNode implements IntegerTree {
 		}
 		if (leftDepth > rightDepth){
 			return 1 + leftDepth;
-		}
+		} 
 		else {
 				return 1 + rightDepth;
 		}
